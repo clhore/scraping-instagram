@@ -34,4 +34,4 @@ This repositori indicates how you can extract a user's intagarm posts
 
     >> For instance:
     
-![](https://i.imgur.com/9lNGqV8.png)
+![](https://i.imgur.com/iX25HLb.png)
