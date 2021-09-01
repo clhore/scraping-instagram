@@ -24,11 +24,8 @@ This repositori indicates how you can extract a user's intagarm posts
 
     [5] Then move the .zip to the project folder
 
-![](https://i.imgur.com/1AT4upX.png)
-
     [6] Then move the .zip to the project folder
 
-![](https://i.imgur.com/JSuHqah.png)
 ![](https://i.imgur.com/94Mdntj.png)
 
 
