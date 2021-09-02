@@ -45,7 +45,7 @@ This repository indicates how you can extract a user's instagram posts
         [4] $ ln -sf /usr/lib/node_modules/chromedriver/lib/chromedriver/chromedriver ~/bin/chromedriver
 
 # Check that you have all the necessary files
-![](https://i.imgur.com/V7exPRx.png)
+![](https://i.imgur.com/ViszOV0.png)
 
 # Enter your username and password in the instagram_credentials.json
 
