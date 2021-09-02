@@ -1,5 +1,5 @@
 # scraping-instagram
-This repositori indicates how you can extract a user's intagarm posts
+This repository indicates how you can extract a user's instagram posts
 
 # - Windows 
 
