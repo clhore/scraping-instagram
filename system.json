@@ -1,0 +1,9 @@
+{
+  "system": "windows",
+  "name": "scraping_instagram",
+  "description": "This repository indicates how you can extract a user's instagram posts",
+  "title": "scrap",
+  "version": 1.1,
+  "author": "@clhore",
+  "minimumCoreVersion": "Python3"
+}
