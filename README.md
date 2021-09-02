@@ -36,7 +36,7 @@ This repository indicates how you can extract a user's instagram posts
         [1] $ sudo apt install nodejs
         [2] $ sudo apt install npm
         [3] $ sudo npm -g install chromedriver
-        [4] $ ln -sf /usr/local/lib/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin/chromedriver
+        [4] $ sudo ln -sf /usr/local/lib/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin/chromedriver
         
         >> Ubuntu
         [1] $ sudo apt install nodejs
