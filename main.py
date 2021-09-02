@@ -6,7 +6,6 @@ if __name__ == '__main__':
 
     # import password
     credentials = JSON.JSON(file='instagram_credentials.json').read()
-
     # import content system.json
     system = JSON.JSON(file='system.json').read()
     
