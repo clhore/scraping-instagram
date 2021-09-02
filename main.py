@@ -12,13 +12,16 @@ if __name__ == '__main__':
     # check user system
     if system['system'].lower() == 'linux':
         driver_system = 'chromedriver'
+        path_bar = '//'
     elif system['system'].lower() == 'windows':
         driver_system = 'chromedriver.exe'
+        path_bar = '\\'
     else:
         driver_system = 'chromedriver.exe'
+        path_bar = '\\'
 
     # create new session auto instagram
-    instagram = auto_intagram.INSTAGRAM(driver_path=driver_system)
+    instagram = auto_intagram.INSTAGRAM(driver_path=driver_system, path_bar=path_bar)
 
     # options and control
     instagram.open() # open instagram
@@ -39,9 +42,9 @@ if __name__ == '__main__':
         pdf_file.add_page(orientation='L')
         pdf_file.flag_es() # and flag from spain
         # select file
-        _file = 'article//{}'.format(name_art)
+        _file = 'article{0}{1}'.format(path_bar, name_art)
         pdf_file.picture(file=_file, x=20, y=20.0, w=1586 / 15, h=1920 / 15)
-        pdf_file.file_text(name='article//{}'.format(name_art.replace('jpg', 'txt')))
+        pdf_file.file_text(name='article{0}{1}'.format(path_bar, name_art.replace('jpg', 'txt')))
 
     # save PDF file
     pdf_file.set_author(system['author'])
