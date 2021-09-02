@@ -13,7 +13,7 @@ from module import JSON
 
 class INSTAGRAM:
 
-    def __init__(self, driver_path=None):
+    def __init__(self, driver_path=None, path_bar='\\'):
         super().__init__()
 
         # options windows
@@ -24,6 +24,7 @@ class INSTAGRAM:
         # variables
         self.anchors = None
         self.path = None
+        self.path_bar = path_bar
         if driver_path is None:
             self.driver_path = 'driver.exe'
         else:
@@ -82,7 +83,7 @@ class INSTAGRAM:
         # open username
         time.sleep(2)
         username = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, '//div[contains(text(), "{desc}")]'.format(desc=description))))\
+            EC.element_to_be_clickable((By.XPATH, '//div[contains(text(), "{desc}")]'.format(desc=description)))) \
             .click()
         # scroll down 2 times
         # increase the range to scroll more
@@ -138,7 +139,9 @@ class INSTAGRAM:
                 '/html/body/div[1]/section/main/div/div[1]/article/div[3]/div[1]/ul/div/li/div/div/div[2]/span')
             ctx = ctx.text
             # create file name
-            filename = '{ruta}\\{article}{num_art}.txt'.format(ruta=self.path, article=ruta, num_art=count)
+            filename = '{ruta}{bar}{article}{num_art}.txt'.format(
+                ruta=self.path, bar=self.path_bar, article=ruta, num_art=count
+            )
             # create file article
             with open(filename, 'wb') as f:
                 ctx = ctx.encode('latin-1', errors='ignore')
@@ -150,23 +153,27 @@ class INSTAGRAM:
             time.sleep(0.4)
 
         # download images
-        list_img = list() # create list
-        counter = 0 # initial count
+        list_img = list()  # create list
+        counter = 0  # initial count
         for image in images:
             name_img = 'article' + str(counter + 1) + '.jpg'
             list_img.append(name_img)
             # valid file name
-            valid = os.path.exists('{path}\\{file}'.format(path=self.path, file=name_img))
+            valid = os.path.exists('{path}{bar}{file}'.format(
+                path=self.path, bar=self.path_bar, file=name_img)
+            )
             if valid:
                 # remove file
-                os.remove('{path}\\{file}'.format(path=self.path, file=name_img))
+                os.remove('{path}{bar}{file}'.format(
+                    path=self.path, bar=self.path_bar, file=name_img
+                ))
             # Wait for 0.5 seconds
             time.sleep(0.5)
             # save image
             save_as = os.path.join(self.path, name_img)
             wget.download(image, save_as)
             counter += 1
-            
+
         # writer file.json
         JSON.JSON(file='file.json').write(ctx=list_img)
         print(list_img)
