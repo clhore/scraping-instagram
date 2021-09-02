@@ -9,6 +9,7 @@ if __name__ == '__main__':
 
     # import content system.json
     system = JSON.JSON(file='system.json').read()
+    
     # check user system
     if system['system'].lower() == 'linux':
         driver_system = 'chromedriver'
