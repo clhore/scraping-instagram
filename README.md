@@ -32,7 +32,10 @@ This repository indicates how you can extract a user's instagram posts
     [*] You will have to run the following commands
    
         >> Parrot OS
-        $ 
+        [1] $ sudo apt install nodejs
+        [2] $ sudo apt install npm
+        [3] $ sudo npm -g install chromedriver
+        [4] $ ln -sf /usr/local/lib/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin/chromedriver
 
 # Check that you have all the necessary files
 ![](https://i.imgur.com/V7exPRx.png)
