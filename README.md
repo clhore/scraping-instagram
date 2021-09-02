@@ -26,7 +26,8 @@ This repository indicates how you can extract a user's instagram posts
 
 ![](https://i.imgur.com/94Mdntj.png)
 
-# - In case of using linux you should modify the system.json file
+    [6]In case of using linux you should modify the system.json file
+
 ![](https://i.imgur.com/j56UE70.png)
 
     [*] You will have to run the following commands
