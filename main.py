@@ -1,7 +1,7 @@
 # library
 import platform
 
-# module file
+# personal module
 from module import pdf, JSON, auto_intagram
 
 if __name__ == '__main__':
